@@ -1,0 +1,85 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.user_actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 95px;
+
+  @include mobileSmall {
+    gap: 60px;
+  }
+
+  > .auth {
+    position: relative;
+    line-height: 0;
+
+    > button {
+      @include button;
+
+      &:hover {
+        @include actionBtnHover;
+      }
+
+      > img {
+        width: 14px;
+        height: 17px;
+      }
+    }
+
+    > ul {
+      position: absolute;
+      top: calc(100% + 15px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      background-color: $white-color;
+      box-shadow: $banner-shadow;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      z-index: 2;
+
+      > li {
+        > a {
+          display: block;
+          padding: 20px 5px;
+          text-decoration: none;
+          color: $black-color;
+          transition: background-color 0.4s ease-in-out;
+
+          &:hover {
+            background-color: darken($white-color, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  > button {
+    @include button;
+    position: relative;
+
+    &:hover {
+      @include actionBtnHover;
+    }
+
+    > img {
+      padding-right: 5px;
+    }
+
+    > .counter {
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+      z-index: 1;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background-color: $validate;
+      font-weight: 500;
+      color: $white-color;
+    }
+  }
+}

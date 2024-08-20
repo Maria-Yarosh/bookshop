@@ -1,0 +1,16 @@
+@import '@/styles/_variables.scss';
+
+.field {
+  padding: 10px;
+  border: 1px solid $btn-color;
+  color: $btn-color;
+
+  &::placeholder {
+    opacity: 0.7;
+  }
+
+  &.validate {
+    color: $validate;
+    border-color: $validate;
+  }
+}

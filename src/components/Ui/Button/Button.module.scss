@@ -1,0 +1,37 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.btn {
+  @include button;
+  width: 176px;
+  padding: 18px 0;
+  font-size: 8px;
+  line-height: 10px;
+  font-weight: 700;
+  color: $btn-color;
+  border: 1px solid $btn-color;
+  text-transform: uppercase;
+
+  &.auth {
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: $white-color;
+    background-color: $dote-color;
+    border: none;
+    transition: opacity 0.4s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &.cart {
+    color: $gray-color;
+    border-color: $border-color;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
